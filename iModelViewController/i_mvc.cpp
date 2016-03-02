@@ -46,6 +46,8 @@ void i_mvc::on_pushButton_Add_clicked()
 
 void i_mvc::on_pushButton_Insert_clicked()
 {
+    //insert di klik
+
     int row = ui->listView->currentIndex().row();
 
     i_model->insertRows(row,1);
