@@ -19,6 +19,9 @@ i_mvc::i_mvc(QWidget *parent) :
     ui->listView->setModel(i_model);
     ui->comboBox->setModel(i_model);
 
+    ui->listView->setEditTriggers(QAbstractItemView::AnyKeyPressed |
+                                  QAbstractItemView::DoubleClicked);
+
 
 }
 
@@ -51,4 +54,9 @@ void i_mvc::on_pushButton_Insert_clicked()
 
     ui->listView->setCurrentIndex(index);
     ui->listView->edit(index);
+}
+
+void i_mvc::on_pushButton_Delete_clicked()
+{
+    i_model->removeRows(ui->listView->currentIndex().row(),1);
 }

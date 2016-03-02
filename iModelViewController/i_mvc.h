@@ -23,6 +23,8 @@ private slots:
 
     void on_pushButton_Insert_clicked();
 
+    void on_pushButton_Delete_clicked();
+
 private:
     Ui::i_mvc *ui;
     QStringListModel *i_model;
